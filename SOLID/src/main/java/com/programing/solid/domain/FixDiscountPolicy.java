@@ -7,7 +7,12 @@ import com.programing.solid.repository.MemoryMemberRepository;
 
 public class FixDiscountPolicy implements DiscountPolicy {
 
-    MemberRepository memberRepository = new MemoryMemberRepository();
+    MemberRepository memberRepository;
+
+    public FixDiscountPolicy(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
     int fixedDiscountAmount = 1000;
 
     @Override

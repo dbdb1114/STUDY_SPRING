@@ -5,7 +5,11 @@ import com.programing.solid.domain.FixDiscountPolicy;
 import com.programing.solid.domain.Order;
 
 public class OrderServiceImpl implements OrderService {
-    DiscountPolicy discountPolicy = new FixDiscountPolicy();
+    DiscountPolicy discountPolicy;
+
+    public OrderServiceImpl(DiscountPolicy discountPolicy) {
+        this.discountPolicy = discountPolicy;
+    }
 
     @Override
     public Order createOrder(Order order) {
