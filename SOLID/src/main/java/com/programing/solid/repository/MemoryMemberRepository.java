@@ -5,7 +5,7 @@ import com.programing.solid.domain.member.Member;
 import java.util.HashMap;
 
 public class MemoryMemberRepository implements MemberRepository {
-    HashMap<Long, Member> store = new HashMap<>();
+    static HashMap<Long, Member> store = new HashMap<>();
 
     @Override
     public void save(Member member) {
