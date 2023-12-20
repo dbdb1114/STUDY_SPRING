@@ -4,7 +4,7 @@ import com.programing.solid.domain.member.Grade;
 import com.programing.solid.domain.member.Member;
 
 public interface MemberRepository {
-    void save(Long id, String name, Grade);
+    void save(Member member);
 
     Member findById(Long id);
 }
