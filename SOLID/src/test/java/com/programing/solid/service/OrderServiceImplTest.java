@@ -16,8 +16,9 @@ import org.junit.jupiter.api.Test;
 
 class OrderServiceImplTest {
 
-    DiscountPolicy discountPolicy = new FixDiscountPolicy();
-    MemberRepository memberRepository = new MemoryMemberRepository();
+    DiscountPolicy discountPolicy;
+    MemberRepository memberRepository;
+
 
     @BeforeEach
     void 회원추가() {
